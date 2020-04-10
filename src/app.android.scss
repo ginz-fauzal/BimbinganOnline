@@ -1,0 +1,68 @@
+// Import common styles
+@import "app-common";
+
+// Place any CSS rules you want to apply only on Android here
+.fa {
+    font-family: "FontAwesome";
+  }
+  
+  .bg{
+    background-color: #00bcd4;
+  }
+
+  TextView{
+    border-width: 1;
+    border-color: white;
+  }
+  
+  .header{
+    padding: 20;
+    margin: 0 20 0 20;
+    border-radius: 10%;
+  }
+  
+  .t-white{
+    color: white;
+  }
+  
+  .t-green{
+    color: #00bcd4;
+  }
+  
+  .border{
+    border-radius: 100%;
+  }
+  
+  .img{
+    border-color: white;
+    border-width: 1;
+    border-radius: 100%;
+  }
+  
+  .option{
+    border-color: black;
+    height: 18;
+    width: 18;
+    font-size: 15;
+    border-width: 1;
+    border-radius: 100%;
+  }
+  
+  .btn{
+    color: white;
+    border-color: #00bcd4;
+    border-width: 1;
+    border-radius: 10%;
+    background-color: #00bcd4;
+    height: 30;
+    padding: 0;
+  }
+  
+  .mode{
+    color: white;
+    border-color: #00bcd4;
+    border-width: 1;
+    border-radius: 100%;
+    vertical-align: middle;
+    background-color: #00bcd4;
+  }

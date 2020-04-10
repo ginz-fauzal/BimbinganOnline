@@ -1,0 +1,50 @@
+<ActionBar class="bg" title="Bimbingan Online">
+    <Label class="action-bar-title" text="Bimbingan Online"></Label>
+</ActionBar>
+<GridLayout rows="60,*" backgroundColor="{{darkmode==1 ? '#2E373E':'#f3f3f3'}}">
+    <GridLayout #grid0 (loaded)="animate(grid0,3000)" row="0" margin="20" height="20" columns="140,*,80,40">
+        <Label col="0" (tap)="onNavItemTap('tambah')" class="fa text-center mode {{darkmode==1 ? 't-white':''}}" text="&#xf067; Tambah Bimbingan"></Label>
+        <Label col="1" class="" text=" "></Label>
+        <Label col="2" class="fa text-center mode" text="Mode {{darkmode==1 ? '&#xf186;':'&#xf185;'}}"
+            androidElevation="5" (tap)="onDarkMode()"></Label>
+        <Label col="3" class="fa text-right {{darkmode==1 ? 't-white':''}}" text="&#xf0f3;"></Label>
+    </GridLayout>
+
+    <GridLayout row="1" rows="auto,*" backgroundColor="{{darkmode==1 ? '#2E373E':'#f3f3f3'}}">
+        <GridLayout #grid (loaded)="animate(grid,3000)" row=" 0" rows="auto" columns="*,100" class="header bg"
+            androidElevation="5">
+            <StackLayout row="0" col="0">
+                <Label class="fa font-weight-bold h3 t-white" text="Dosen Pembimbing 1 &#xf079;"></Label>
+                <Label class="h6 t-white" text="NID. 123456789"></Label>
+                <Label class="font-weight-bold h3 t-white" text="Fauzal Ghani"></Label>
+            </StackLayout>
+            <StackLayout row="0" col="1">
+                <Image class="img" width="70" height="70" src="~/image/student0.jpg" stretch="aspectFill">
+                </Image>
+            </StackLayout>
+        </GridLayout>
+        <ScrollView row="2" #grid2 (loaded)="animate(grid2,-3000)">
+            <GridLayout>
+                <StackLayout>
+                    <StackLayout *ngFor=" let item of data" backgroundColor="{{darkmode==1 ? '#3C434B':'#FFFFFF'}}"
+                        margin="20 20 0 20" androidElevation="5" borderRadius="10">
+                        <DockLayout padding="10 20 0 20" (tap)="onNavItemTap('class')">
+                            <StackLayout width="70%" dock="left">
+                                <Label class="h2 {{darkmode==1 ? 't-white':''}}" text="{{item.class}}">
+                                </Label>
+                                <Label class="{{darkmode==1 ? 't-white':''}}" text="{{item.day}}, {{item.time}}">
+                                </Label>
+                                <Label></Label>
+                            </StackLayout>
+                            <Label width="30%" dock="right" class="h1 t-green fa text-center" text="&#xf15c;"
+                                verticalAlignment="middle">
+                            </Label>
+                        </DockLayout>
+                        <StackLayout class="bg" height="20" borderRadius="0 0 10 10">
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </GridLayout>
+        </ScrollView>
+    </GridLayout>
+</GridLayout>

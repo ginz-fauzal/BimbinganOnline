@@ -1,0 +1,45 @@
+<ActionBar class="bg" title="Detail Bimbingan">
+    <Label class="action-bar-title" text="Detail Bimbingan"></Label>
+</ActionBar>
+<GridLayout rows="60,*" backgroundColor="{{darkmode==1 ? '#2E373E':'#f3f3f3'}}">
+    <GridLayout #grid (loaded)="animate(grid,3000)" row="0" margin="0 20 0 20" height="20" columns="*,80,40">
+        <Label col="0" class="fa {{darkmode==1 ? 't-white':''}}" text="&#xf060; Back"
+            (tap)="onNavItemTap('home')"></Label>
+        <Label col="1" class="fa text-center mode" text="Mode {{darkmode==1 ? '&#xf186;':'&#xf185;'}}"
+            androidElevation="5" (tap)="onDarkMode()"></Label>
+        <Label col="2" class="fa text-right {{darkmode==1 ? 't-white':''}}" text="&#xf0f3;"></Label>
+    </GridLayout>
+    <GridLayout row="2" rows="auto,*,auto" backgroundColor="{{darkmode==1 ? '#2E373E':'#f3f3f3'}}">
+        <GridLayout #grid2 (loaded)="animate(grid2,3000)" row="0" rows="auto,auto,auto" margin="0 20 0 20"
+            padding="10 0 10 0" backgroundColor="{{darkmode==1 ? '#757575':'#FFFFFF'}}" androidElevation="5"
+            borderRadius="10">
+            <Label row="0" margin="0 20 0 20" class="fa h3 text-center {{darkmode==1 ? 't-white':''}}"
+                verticalAlignment="middle" text="&#xf073; 2 November 2019"></Label>
+            <Label row="1" margin="0 20 0 20" class="fa h3 {{darkmode==1 ? 't-white':''}}" verticalAlignment="middle"
+                text="Materi:"></Label>
+            <TextField row="2" class="h3 {{darkmode==1 ? 't-white':''}}" margin="0 20 0 20" verticalAlignment="middle"
+                text="Dokumen">
+            </TextField>
+        </GridLayout>
+        <GridLayout #grid3 padding="10" (loaded)="animate(grid3,-3000)" row="1" borderRadius="10"
+            backgroundColor="{{darkmode==1 ? '#3C434B':'#FFFFFF'}}" androidElevation="5" margin="20 20 0 20"
+            rows="auto,*,auto" columns="*,*">
+            <Label row="0" colSpan="2" class="h3 text-center bg t-white" borderRadius="10" text="Pembahasan/Hasil/Saran/Tugas"></Label>
+            <TextView class="h3 {{darkmode==1 ? 't-white':''}}" row="1" colSpan="2"
+                text="Bab I dan Bab 2 sudah ok tinggal lanjut ke bab 3">
+            </TextView>
+        </GridLayout>
+        <GridLayout #grid4 padding="10" (loaded)="animate(grid4,3000)" row="3" borderRadius="10"
+            backgroundColor="{{darkmode==1 ? '#3C434B':'#FFFFFF'}}" androidElevation="5" margin="20"
+            rows="auto" columns="*,*">
+            <StackLayout row="2" col="0">
+                <Label text="Doc TA" class="fa h3 text-center {{darkmode==1 ? 't-white':''}}"></Label>
+                <Button class="fa btn" text="&#xf019; 3411151048.doc" textWrap="false"></Button>
+            </StackLayout>
+            <StackLayout row="2" col="1">
+                <Label text="Revisi Doc TA" class="fa h3 text-center {{darkmode==1 ? 't-white':''}}"></Label>
+                <Button class="fa btn" text="&#xf019; Rev-3411151048.doc" textWrap="false"></Button>
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>
+</GridLayout>
